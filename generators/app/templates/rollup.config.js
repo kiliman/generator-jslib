@@ -1,5 +1,6 @@
 import rollupResolve from 'rollup-plugin-node-resolve'
 import rollupBabel from 'rollup-plugin-babel'
+import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 const externals = [
@@ -18,7 +19,7 @@ const makeExternalPredicate = externalsArr => {
 export default {
   input: 'src/index.js',
   external: makeExternalPredicate(externals),
-  plugins: [rollupResolve(), rollupBabel()],
+  plugins: [rollupResolve(), rollupBabel(), terser()],
   output: [
     { file: pkg.main, format: 'cjs' },
     { file: pkg.module, format: 'es' }
