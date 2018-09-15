@@ -1,6 +1,6 @@
 {
   "name": "@kiliman/generator-jslib",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Yeoman generator to create JavaScript libraries",
   "homepage": "https://github.com/kiliman/generator-jslib",
   "author": {
