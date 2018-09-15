@@ -1,5 +1,4 @@
 const Generator = require('yeoman-generator')
-const mkdirp = require('mkdirp')
 const _s = require('underscore.string')
 
 class JslibGenerator extends Generator {
@@ -88,15 +87,19 @@ class JslibGenerator extends Generator {
     // setup test folder
     this.fs.write('test/.gitkeep', '')
 
-    // copy template files directly and rename to leading .
-    ;['_editorconfig', '_eslintrc.json', '_gitignore', '_prettierrc'].forEach(
-      f => {
-        this.fs.copy(
-          this.templatePath(f),
-          this.destinationPath(f.replace(/^_/, '.'))
-        )
-      }
-    )
+    // copy template files directly and rename leading _ to .
+    ;[
+      '_editorconfig',
+      '_eslintrc.json',
+      '_gitignore',
+      '_prettierrc',
+      'rollup.config.js'
+    ].forEach(f => {
+      this.fs.copy(
+        this.templatePath(f),
+        this.destinationPath(f.replace(/^_/, '.'))
+      )
+    })
   }
 
   git() {
