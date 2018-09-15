@@ -90,6 +90,7 @@ class JslibGenerator extends Generator {
     // copy template files directly and rename leading _ to .
     ;[
       '_editorconfig',
+      '_eslinignore',
       '_eslintrc.json',
       '_gitignore',
       '_prettierrc',
