@@ -1,12 +1,11 @@
 {
   "name": "@kiliman/generator-jslib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Yeoman generator to create JavaScript libraries",
-  "homepage": "",
+  "homepage": "https://github.com/kiliman/generator-jslib",
   "author": {
     "name": "kiliman",
-    "email": "kiliman@gmail.com",
-    "url": ""
+    "email": "kiliman@gmail.com"
   },
   "files": [
     "generators"
@@ -31,8 +30,8 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
+    "underscore.string": "^3.3.4",
     "yeoman-generator": "^2.0.1",
-    "chalk": "^2.1.0",
     "yosay": "^2.0.1"
   },
   "jest": {
